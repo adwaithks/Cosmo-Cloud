@@ -70,50 +70,50 @@ Eg. Schema :
 
 # Component Structure
 
-- FieldTree
-  - FieldGroup
-    - Field
-      - FieldInfo
-    - Field
-      - FieldInfo
-    - Field
-      - FieldInfo
-      - FieldGroup (for nested groups)
+-   FieldTree
+    -   FieldGroup
+        -   Field
+            -   FieldInfo
+        -   Field
+            -   FieldInfo
+        -   Field
+            -   FieldInfo
+            -   FieldGroup (for nested groups)
 
 # Component Architectures
 
 1. FieldTree
 
-- fields: IField[]
-- updateFields: (fields: IField[]) => void
+-   fields: IField[]
+-   updateFields: (fields: IField[]) => void
 
 2. Field
 
-- updateFieldName: (id) => void
-- updateFieldType: (id, newType) => void
-- removeField: (id) => void
-- toggleIsRequired: (id) => void
-- addNewField: (id) => void
-- field: IField
-- depth?: number
+-   updateFieldName: (id) => void
+-   updateFieldType: (id, newType) => void
+-   removeField: (id) => void
+-   toggleIsRequired: (id) => void
+-   addNewField: (id) => void
+-   field: IField
+-   depth?: number
 
 3. FieldGroup
 
-- updateFieldName: (id) => void
-- updateFieldType: (id, newType) => void
-- removeField: (id) => void
-- toggleIsRequired: (id) => void
-- addNewField: (id) => void
-- fields: IField[]
+-   updateFieldName: (id) => void
+-   updateFieldType: (id, newType) => void
+-   removeField: (id) => void
+-   toggleIsRequired: (id) => void
+-   addNewField: (id) => void
+-   fields: IField[]
 
 4. FieldInfo
 
-- updateFieldName: (id) => void
-- updateFieldType: (id, newType) => void
-- removeField: (id) => void
-- toggleIsRequired: (id) => void
-- addNewField: (id) => void
-- fields: IField
+-   updateFieldName: (id) => void
+-   updateFieldType: (id, newType) => void
+-   removeField: (id) => void
+-   toggleIsRequired: (id) => void
+-   addNewField: (id) => void
+-   fields: IField
 
 Where,
 
@@ -129,7 +129,7 @@ I really don't want the users to write their own CRUD operations, that is going 
 
 # How to see the configuration behind the UI?
 
-I have added a <pre> tag in the index.jsx (in FieldTree folder).
+I have added a `<pre>` tag in the index.jsx (in FieldTree folder).
 It will render the configuration as you make changes in the UI. I didn't implement the save button. (one less click!)
 
 # Things that I feel is bad
